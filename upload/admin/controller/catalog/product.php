@@ -109,7 +109,9 @@ class ControllerCatalogProduct extends Controller {
 			if (isset($this->request->get['page'])) {
 				$url .= '&page=' . $this->request->get['page'];
 			}
-
+			/*
+			Redirect to same edit form
+			*/
 			$this->response->redirect($this->url->link('catalog/product', 'token=' . $this->session->data['token'] . $url, true));
 		}
 
